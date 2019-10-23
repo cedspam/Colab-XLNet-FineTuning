@@ -18,6 +18,10 @@ import function_builder
 import data_utils
 
 # TPU parameters
+
+
+flags.DEFINE_string("tpu_address", default=None,
+      help="tpu_address")
 flags.DEFINE_string("master", default=None,
       help="master")
 flags.DEFINE_string("tpu", default=None,
@@ -31,6 +35,8 @@ flags.DEFINE_string("tpu_zone",default=None,
       "will attempt to automatically detect the GCE project from metadata.")
 flags.DEFINE_bool("use_tpu", default=True,
       help="Use TPUs rather than plain CPUs.")
+flags.DEFINE_bool("use_colab_tpu", default=True,
+      help="Use use_colab_tpu .")
 flags.DEFINE_integer("num_hosts", default=1,
       help="number of TPU hosts")
 flags.DEFINE_integer("num_core_per_host", default=8,
