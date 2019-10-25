@@ -53,6 +53,8 @@ flags.DEFINE_string("model_dir", default=None,
       help="Estimator model_dir.")
 flags.DEFINE_string("init_checkpoint", default=None,
       help="Checkpoint path for initializing the model.")
+flags.DEFINE_string("output_dir", default="output",
+      help="output_dir.")
 
 # Optimization config
 flags.DEFINE_float("learning_rate", default=1e-4,
